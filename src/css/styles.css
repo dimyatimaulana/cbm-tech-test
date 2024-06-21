@@ -348,7 +348,7 @@ input:hover {
 
 /* Work Order */
 
-#workOrder {
+#workOrder, #detail {
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -377,4 +377,11 @@ input:hover {
   width: 50%;
   border-radius: 20px;
   z-index: 20;
+}
+
+#projectContentInfo {
+  box-shadow: 2px 2px 15px #c5c5c5;
+  padding: 1.5rem 1.8rem;
+  border-radius: 15px;
+  min-width: 720px;
 }

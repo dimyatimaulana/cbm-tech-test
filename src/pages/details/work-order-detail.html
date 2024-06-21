@@ -149,16 +149,25 @@
         <div class="mb-3 d-flex gap-3 align-items-center">
           <div class="fs-5 fw-semibold d-flex gap-1 align-items-center">
             <div>Project /</div>
-            <div class="text-secondary">Rehabilitasi Pos Pantau Palopo</div>
+            <div class="fs-6 text-secondary">Rehabilitasi Pos Pantau Palopo</div>
           </div>
-          <div class="fs-6 fw-semibold text-secondary">Maintenance</div>
+          <div class="d-flex gap-2 align-items-center">
+            <div class="fs-6 fw-semibold p-1 rounded-3 bg-primary text-light">
+              Operation
+            </div>
+            <div class="fs-6 fw-semibold p-1 rounded-3 bg-warning text-light">
+              Maintenance
+            </div>
+          </div>
         </div>
         <div
           id="navMenuProject"
           class="d-flex align-items-center mb-3 border-bottom border-dark"
         >
-          <div id="workOrder" class="p-3">
-            <a href="" class="text-decoration-none text-light fw-semibold"
+          <div id="workOrderr" class="p-3">
+            <a
+              href="./work-order.html"
+              class="text-decoration-none text-dark fw-semibold"
               >Work Order</a
             >
           </div>
@@ -173,152 +182,104 @@
             >
           </div>
           <div id="detail" class="p-3">
-            <a href="" class="text-decoration-none text-dark fw-semibold"
+            <a href="" class="text-decoration-none text-light fw-semibold"
               >Detail</a
             >
           </div>
         </div>
         <div id="projectContent">
           <div id="projectContentHeader" class="d-flex gap-4 mb-3">
+            <div class="fs-5 fw-semibold p-2">Project Info</div>
+          </div>
+          <div
+            id="projectContentInfo"
+            class="w-100 h-100 d-flexalign-items-center mb-3"
+          >
+            <div class="row" style="max-width: fit-content; min-width: 600px">
+              <div class="col">
+                <div>Project</div>
+                <div>Amount</div>
+                <div>Location</div>
+                <div>Customer</div>
+                <div>Project Manager</div>
+                <div>Project Type</div>
+                <div>Start Date</div>
+                <div>End Date</div>
+                <div>Weekly Period Start Day</div>
+                <div>Employees With Access</div>
+              </div>
+              <div class="col">
+                <div>: Rehabilitasi Pos Pantau Palopo</div>
+                <div>: -</div>
+                <div>: -</div>
+                <div>: Kemenhub</div>
+                <div>: -</div>
+                <div>: Operation & Maintenance</div>
+                <div>: -</div>
+                <div>: -</div>
+                <div>: MONDAY</div>
+                <div>: -</div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="projectContentHeader"
+            class="d-flex gap-4 justify-content-between mb-3"
+          >
+            <div class="fs-5 fw-semibold p-2">Employees</div>
             <button class="btn d-flex align-items-center gap-2" id="newProject">
               <i class="lni lni-plus"></i>
               <a href="#" class="text-decoration-none text-light"
-                >New Project</a
+                >Add Empoyees</a
               >
             </button>
-            <div id="searchBar">
-              <i class="lni lni-search-alt"></i>
-              <input placeholder="Search" type="search" class="input" />
-            </div>
           </div>
-          <table class="table table-bordered">
-            <thead>
-              <tr id="tableHead" style="vertical-align: middle">
-                <th class="text-center">No</th>
-                <th class="text-center">Title</th>
-                <th class="text-center">Wo No</th>
-                <th class="text-center">Start Date</th>
-                <th class="text-center">End Date</th>
-                <th class="text-center">Payment Status</th>
-                <th class="text-center">Value</th>
-                <th class="text-center">Progress Status</th>
-                <th class="text-center">Progress Complete (%)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="text-center">1</td>
-                <td>Penambahan sumur dan pompa</td>
-                <td>WO-2024-001</td>
-                <td class="text-center">01-06-2024</td>
-                <td class="text-center">30-06-2024</td>
-                <td class="text-center">PAID</td>
-                <td>Rp. 100,000,000.00</td>
-                <td class="text-center">Selesai</td>
-                <td class="d-flex align-items-center">
-                  <div
-                    class="progress grow w-100 h-100"
-                    role="progressbar"
-                    aria-label="Basic example"
-                    aria-valuenow="25"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar progress-bar-striped"
-                      style="width: 75%"
-                    >
-                      75%
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">2</td>
-                <td>Perbaikan Jembatan</td>
-                <td>WO-2024-002</td>
-                <td class="text-center">03-06-2024</td>
-                <td class="text-center">07-06-2024</td>
-                <td class="text-center">UNPAID</td>
-                <td>Rp. 65,000,000.00</td>
-                <td class="text-center">Selesai</td>
-                <td class="d-flex align-items-center">
-                  <div
-                    class="progress grow w-100 h-100"
-                    role="progressbar"
-                    aria-label="Basic example"
-                    aria-valuenow="25"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar progress-bar-striped"
-                      style="width: 75%"
-                    >
-                      75%
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">3</td>
-                <td>Pengadaan Peralatan Kantor</td>
-                <td>WO-2024-003</td>
-                <td class="text-center">17-06-2024</td>
-                <td class="text-center">28-06-2024</td>
-                <td class="text-center">UNPAID</td>
-                <td>Rp. 15,000,000.00</td>
-                <td class="text-center">Uji Fungsi</td>
-                <td class="d-flex align-items-center">
-                  <div
-                    class="progress grow w-100 h-100"
-                    role="progressbar"
-                    aria-label="Basic example"
-                    aria-valuenow="25"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar progress-bar-striped"
-                      style="width: 85%"
-                    >
-                      85%
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">4</td>
-                <td>Perbaikan Jaringan CCTV</td>
-                <td>WO-2024-004</td>
-                <td class="text-center">24-06-2024</td>
-                <td class="text-center">31-06-2024</td>
-                <td class="text-center">UNPAID</td>
-                <td>Rp. 25,000,000.00</td>
-                <td class="text-center">Analisis dan Desain</td>
-                <td class="d-flex align-items-center">
-                  <div
-                    class="progress grow w-100 h-100"
-                    role="progressbar"
-                    aria-label="Basic example"
-                    aria-valuenow="25"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar progress-bar-striped"
-                      style="width: 18%"
-                    >
-                      18%
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div
+            id="projectContentInfo"
+            class="w-100 h-100 d-flex align-items-center justify-content-center"
+          >
+            <div>No Employees</div>
+          </div>
         </div>
       </main>
-      <div id="modal" class="position-fixed"></div>
+      <div id="modal" style="padding-top: 200px;">
+        <div id="modalContent" class="position-relative">
+          <div id="formHeader" class="mb-3">Add Employee</div>
+          <div id="formInput">
+            <div class="mb-2">
+              <label for="employeeName" class="form-label ps-2 fw-semibold"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="employeeName"
+                class="form-control"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="mb-2">
+              <label for="division" class="form-label ps-2 fw-semibold"
+                >Division</label
+              >
+              <input
+                type="text"
+                id="division"
+                class="form-control"
+                placeholder="Division"
+                required
+              />
+            </div>
+            <div
+              id="createProjectActionBtn"
+              class="d-flex gap-2 align-items-center justify-content-end"
+            >
+              <button id="cancelBtn" class="close">Cancel</button>
+              <button id="submitBtn" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

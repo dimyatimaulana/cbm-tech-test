@@ -30,7 +30,7 @@ span.onclick = function () {
 
 cancelBtn.onclick = function () {
   modal.style.display = "none";
-  console.log("hello")
+  console.log("hello");
 };
 
 window.onclick = function (event) {
@@ -38,3 +38,32 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+const ctx = document.getElementById("projectContent");
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: ["02-06-2024", "09-06-2024", "16-06-2024", "23-06-2024", "30-06-2024"],
+    datasets: [
+      {
+        label: "Plan",
+        data: [0, 0, 100, 100, 100],
+        borderWidth: 1,
+      },
+      {
+        label: "Actual",
+        data: [0, 0, 48],
+        borderWidth: 1, 
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+});
+
