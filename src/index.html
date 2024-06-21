@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project</title>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside id="sidebar">
+        <div class="d-flex">
+          <button id="toggleButton" type="button">
+            <i class="lni lni-grid-alt"></i>
+          </button>
+          <div class="sidebar-logo">
+            <a href="#" id="appLogo" class="position-relative">Apps</a>
+            <div id="popup" class="bg-light position-absolute d-flex flex-column gap-3 p-2 rounded-3 z-3 d-none">
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-rocket"></i>
+                <span>Project</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-agenda"></i>
+                <span>Attendance</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-construction-hammer"></i>
+                <span>Worker</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-wallet"></i>
+                <span>Customer</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-pencil"></i>
+                <span>Procurement</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-cog"></i>
+                <span>Configuration</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <ul class="sidebar-nav">
+          <span class="group-item">Workspace</span>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-user"></i>
+              <span>My Workspace</span>
+            </a>
+          </li>
+          <span class="group-item">Menu</span>
+          <li class="sidebar-item">
+            <a href="./index.html" class="sidebar-link">
+              <i class="lni lni-rocket"></i>
+              <span>Project</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-book"></i>
+              <span>Lesson Learned</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link has-dropdown collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#auth"
+              aria-expanded="false"
+              aria-controls="auth"
+            >
+              <i class="lni lni-protection"></i>
+              <span>Auth</span>
+            </a>
+            <ul
+              id="auth"
+              class="sidebar-dropdown list-unstyled collapse"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="./pages/auth/login.html" class="sidebar-link">Login</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Register</a>
+              </li>
+            </ul>
+          </li>
+          <span class="group-item">Master Data</span>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-dashboard"></i>
+              <span>Status</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-layers"></i>
+              <span>Material</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-funnel"></i>
+              <span>Project Type</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="./pages/auth/login.html" class="sidebar-link">
+            <i class="lni lni-exit"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+      <main class="main p-3">
+        <div
+          class="mb-3 fs-5 fw-semibold d-flex gap-5 justify-content-between align-items-center px-2"
+        >
+          <div class="d-flex justify-content-center align-items-center gap-3">
+            <img
+              src="./images/person.webp"
+              alt="profile"
+              class="rounded-circle profile-picture"
+            />
+            <div class="d-flex flex-column">
+              <div>Welcome Back</div>
+              <span class="fs-6">Hello Maulana Dimyati, Good Morning!</span>
+            </div>
+          </div>
+          <div id="searchBar">
+            <i class="lni lni-search-alt"></i>
+            <input placeholder="Search" type="search" class="input" />
+          </div>
+          <div class="notif d-flex gap-2">
+            <div
+              class="rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <i class="lni lni-alarm"></i>
+            </div>
+            <div
+              class="rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <i class="lni lni-popup"></i>
+            </div>
+            <div
+              class="rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <i class="lni lni-cog"></i>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 fs-5 fw-semibold">Project</div>
+        <div class="d-flex justify-content-between px-2 gap-2 mb-3">
+          <div class="d-flex gap-2" id="addExport">
+            <button class="btn d-flex align-items-center gap-2" id="newProject">
+              <i class="lni lni-plus"></i>
+              <a href="./pages/project/create-project.html" class="text-decoration-none text-light">New Project</a>
+            </button>
+            <button class="btn d-flex align-items-center gap-2" id="export">
+              <i class="lni lni-empty-file"></i>
+              <div>Export to XLS</div>
+            </button>
+            <button class="btn d-flex align-items-center gap-2" id="export">
+              <i class="lni lni-empty-file"></i>
+              <div>Export to CSV</div>
+            </button>
+          </div>
+          <div class="d-flex gap-2" id="view">
+            <div
+              class="d-flex justify-content-center align-items-center"
+              id="viewIcon"
+            >
+              <i class="lni lni-funnel"></i>
+            </div>
+            <button
+              class="d-flex justify-content-center align-items-center"
+              id="list"
+            >
+              <i class="lni lni-list"></i>
+            </button>
+            <button class="d-flex justify-content-center align-items-center">
+              <a href="./pages/project/kanban.html">
+                <i class="lni lni-grid-alt text-dark"></i>
+              </a>
+            </button>
+          </div>
+        </div>
+        <table class="table table-bordered">
+          <thead>
+            <tr id="tableHead">
+              <th class="text-center">No</th>
+              <th>Project</th>
+              <th>Project Type</th>
+              <th>Customer</th>
+              <th class="text-center">Start Date</th>
+              <th class="text-center">End Date</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">1</td>
+              <td><a href="./pages/details/work-order.html" class="text-decoration-none text-dark">Rehabilitasi Pos Pantau Palopo</a></td>
+              <td>Operations & Maintenance</td>
+              <td>Kemenhub</td>
+              <td class="text-center">-</td>
+              <td class="text-center">-</td>
+              <td class="d-flex align-items-center">
+                <div
+                  class="progress grow w-100 h-100"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div
+                    class="progress-bar progress-bar-striped"
+                    style="width: 75%"
+                  >
+                    75%
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">2</td>
+              <td>
+                Pengadaan Konstruksi Renovasi Rumah Dinas KPP Pratama Sintang
+              </td>
+              <td>Capital-Based</td>
+              <td>Kemenkeu</td>
+              <td class="text-center">-</td>
+              <td class="text-center">-</td>
+              <td class="d-flex align-items-center">
+                <div
+                  class="progress grow w-100 h-100"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div
+                    class="progress-bar progress-bar-striped"
+                    style="width: 52%"
+                  >
+                    52%
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">3</td>
+              <td>Pembangunan Reservoir SPAM Kota Manado (NUWSP)</td>
+              <td>Capital-Based</td>
+              <td>PUPR</td>
+              <td class="text-center">-</td>
+              <td class="text-center">-</td>
+              <td class="d-flex align-items-center">
+                <div
+                  class="progress grow w-100 h-100"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div
+                    class="progress-bar progress-bar-striped"
+                    style="width: 92%"
+                  >
+                    92%
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center">4</td>
+              <td>Rehab PAUD, Mess Rektor dan Pagar Mess UNIB</td>
+              <td>Operation & Maintenance</td>
+              <td>Kemendikbud</td>
+              <td class="text-center">-</td>
+              <td class="text-center">-</td>
+              <td class="d-flex align-items-center">
+                <div
+                  class="progress grow w-100 h-100"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div
+                    class="progress-bar progress-bar-striped"
+                    style="width: 15%"
+                  >
+                    15%
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <nav
+          id="pagination-nav-links"
+          class="d-flex w-100 gap-2 justify-content-center"
+        >
+          <a id="prevBtn"><i class="lni lni-arrow-left"></i></a>
+          <a id="nav-link-page-active">1</a>
+          <a id="nav-link-page">2</a>
+          <a id="nav-link-page">3</a>
+          <a id="nextBtn"><i class="lni lni-arrow-right"></i></a>
+        </nav>
+      </main>
+    </div>
+  </body>
+</html>

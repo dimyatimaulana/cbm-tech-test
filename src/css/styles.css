@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  background-color: #fafbfe;
+}
+
+#sidebar {
+  width: 70px;
+  min-width: 70px;
+  z-index: 100;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b3137;
+}
+
+#sidebar.expand {
+  width: 260px;
+  min-width: 260px;
+}
+
+#toggleButton {
+  background-color: transparent;
+  color: #fafbfe;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+#toggleButton i {
+  font-size: 1.5rem;
+}
+
+.sidebar-logo {
+  margin: auto 0;
+}
+
+.sidebar-logo a {
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+
+.sidebar-nav {
+  padding: 0 0;
+  flex: 1 1 auto;
+}
+
+a.sidebar-link {
+  text-decoration: none;
+  padding: 0.625rem 1.625rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+}
+
+a.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 3px solid white;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+.group-item {
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+}
+
+/* .sidebar-dropdown .sidebar-link {
+} */
+
+#sidebar:not(.expand) .group-item {
+  display: none;
+  transition: all 0.25s ease-in-out;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  padding: 0;
+  min-width: 15rem;
+  display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
+  display: block;
+  max-height: 15rem;
+  width: 100%;
+  opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 0.075rem 0.075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all 0.2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-out;
+}
+
+#newProject {
+  background-color: #515962;
+  color: white;
+  font-size: 1rem;
+}
+
+#newProject:active {
+  box-shadow: outset 4px 4px 12px #c5c5c5;
+}
+
+#export {
+  background-color: #f3f3f4;
+  border: 0;
+}
+
+#export:hover {
+  box-shadow: 2px 2px 18px #c5c5c5;
+  border: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.profile-picture {
+  object-fit: cover;
+}
+
+/* Search bar */
+#searchBar {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 250px;
+}
+
+#searchBar .input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #2b3137;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+}
+
+#searchBar .input::placeholder {
+  color: #9e9ea7;
+}
+
+#searchBar .input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(45, 32, 37, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(78, 56, 64, 0.1);
+}
+
+.lni-search-alt {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  color: #2b3137;
+  width: 1rem;
+  height: 1rem;
+}
+
+.rounded-circle {
+  background-color: #f3f3f4;
+  width: 44px;
+  height: 44px;
+}
+
+.notif {
+  cursor: pointer;
+}
+
+.notif .rounded-circle:hover,
+#view button:hover {
+  box-shadow: 2px 2px 18px #c5c5c5;
+  transition: 0.2s ease-in-out;
+}
+
+#view #list,
+#kanban {
+  background-color: #515962;
+  color: white;
+}
+
+#view button,
+#viewIcon {
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+#tableHead th {
+  background-color: #f3f3f4;
+}
+
+#nav-link-page {
+  background-color: #f3f3f4;
+  color: #515962;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#nav-link-page-active {
+  background-color: #515962;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#nav-link-page:hover {
+  box-shadow: 2px 2px 18px #c5c5c5 inset;
+}
+
+#prevBtn,
+#nextBtn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#menuPopup {
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+
+#menuPopup i,
+#menuPopup span {
+  color: #2b3137;
+}
+
+#menuPopup:hover,
+#menuPopup i:hover,
+#menuPopup span:hover {
+  background-color: #c3c8ce;
+}
+
+#backBtn button {
+  background-color: transparent;
+  font-weight: 600;
+}
+
+#formCreate form {
+  box-shadow: 2px 2px 15px #c5c5c5;
+  padding: 1.5rem 1.8rem;
+  border-radius: 15px;
+  min-width: 720px;
+}
+
+#formHeader {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#createProjectActionBtn button {
+  border: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+#cancelBtn {
+  background-color: transparent;
+  color: red;
+}
+
+#submitAddAnotherBtn,
+#submitContinueEditingBtn {
+  background-color: #9e9ea7;
+  color: white;
+}
+
+#submitAddAnotherBtn:hover,
+#submitContinueEditingBtn:hover {
+  background-color: #808088;
+  transition: 0.2s ease-in-out;
+}
+
+/* Work Order */
+
+#workOrder {
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #515962;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalContent {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 20px;
+  z-index: 20;
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Order</title>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script type="module" src="../../js/main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside id="sidebar">
+        <div class="d-flex">
+          <button id="toggleButton" type="button">
+            <i class="lni lni-grid-alt"></i>
+          </button>
+          <div class="sidebar-logo">
+            <a href="#" id="appLogo" class="position-relative">Apps</a>
+            <div
+              id="popup"
+              class="bg-light position-absolute d-flex flex-column gap-3 p-2 rounded-3 z-3 d-none"
+            >
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-rocket"></i>
+                <span>Project</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-agenda"></i>
+                <span>Attendance</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-construction-hammer"></i>
+                <span>Worker</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-wallet"></i>
+                <span>Customer</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-pencil"></i>
+                <span>Procurement</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-cog"></i>
+                <span>Configuration</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <ul class="sidebar-nav">
+          <span class="group-item">Workspace</span>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-user"></i>
+              <span>My Workspace</span>
+            </a>
+          </li>
+          <span class="group-item">Menu</span>
+          <li class="sidebar-item">
+            <a href="../../index.html" class="sidebar-link">
+              <i class="lni lni-rocket"></i>
+              <span>Project</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-book"></i>
+              <span>Lesson Learned</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link has-dropdown collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#auth"
+              aria-expanded="false"
+              aria-controls="auth"
+            >
+              <i class="lni lni-protection"></i>
+              <span>Auth</span>
+            </a>
+            <ul
+              id="auth"
+              class="sidebar-dropdown list-unstyled collapse"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="../auth/login.html" class="sidebar-link">Login</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Register</a>
+              </li>
+            </ul>
+          </li>
+          <span class="group-item">Master Data</span>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-dashboard"></i>
+              <span>Status</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-layers"></i>
+              <span>Material</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-funnel"></i>
+              <span>Project Type</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="../auth/login.html" class="sidebar-link">
+            <i class="lni lni-exit"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+      <main class="main p-3">
+        <div class="mb-3 d-flex gap-3 align-items-center">
+          <div class="fs-5 fw-semibold d-flex gap-1 align-items-center">
+            <div>Project /</div>
+            <div class="text-secondary">Rehabilitasi Pos Pantau Palopo</div>
+          </div>
+          <div class="fs-6 fw-semibold text-secondary">Maintenance</div>
+        </div>
+        <div
+          id="navMenuProject"
+          class="d-flex align-items-center mb-3 border-bottom border-dark"
+        >
+          <div id="workOrder" class="p-3">
+            <a href="" class="text-decoration-none text-light fw-semibold"
+              >Work Order</a
+            >
+          </div>
+          <div id="projectHealth" class="p-3">
+            <a href="" class="text-decoration-none text-dark fw-semibold"
+              >Project Health</a
+            >
+          </div>
+          <div id="cashFlow" class="p-3">
+            <a href="" class="text-decoration-none text-dark fw-semibold"
+              >Cash Flow</a
+            >
+          </div>
+          <div id="detail" class="p-3">
+            <a href="" class="text-decoration-none text-dark fw-semibold"
+              >Detail</a
+            >
+          </div>
+        </div>
+        <div id="projectContent">
+          <div id="projectContentHeader" class="d-flex gap-4 mb-3">
+            <button class="btn d-flex align-items-center gap-2" id="newProject">
+              <i class="lni lni-plus"></i>
+              <a href="#" class="text-decoration-none text-light"
+                >New Project</a
+              >
+            </button>
+            <div id="searchBar">
+              <i class="lni lni-search-alt"></i>
+              <input placeholder="Search" type="search" class="input" />
+            </div>
+          </div>
+          <table class="table table-bordered">
+            <thead>
+              <tr id="tableHead" style="vertical-align: middle">
+                <th class="text-center">No</th>
+                <th class="text-center">Title</th>
+                <th class="text-center">Wo No</th>
+                <th class="text-center">Start Date</th>
+                <th class="text-center">End Date</th>
+                <th class="text-center">Payment Status</th>
+                <th class="text-center">Value</th>
+                <th class="text-center">Progress Status</th>
+                <th class="text-center">Progress Complete (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">1</td>
+                <td>Penambahan sumur dan pompa</td>
+                <td>WO-2024-001</td>
+                <td class="text-center">01-06-2024</td>
+                <td class="text-center">30-06-2024</td>
+                <td class="text-center">PAID</td>
+                <td>Rp. 100,000,000.00</td>
+                <td class="text-center">Selesai</td>
+                <td class="d-flex align-items-center">
+                  <div
+                    class="progress grow w-100 h-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar progress-bar-striped"
+                      style="width: 75%"
+                    >
+                      75%
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">2</td>
+                <td>Perbaikan Jembatan</td>
+                <td>WO-2024-002</td>
+                <td class="text-center">03-06-2024</td>
+                <td class="text-center">07-06-2024</td>
+                <td class="text-center">UNPAID</td>
+                <td>Rp. 65,000,000.00</td>
+                <td class="text-center">Selesai</td>
+                <td class="d-flex align-items-center">
+                  <div
+                    class="progress grow w-100 h-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar progress-bar-striped"
+                      style="width: 75%"
+                    >
+                      75%
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">3</td>
+                <td>Pengadaan Peralatan Kantor</td>
+                <td>WO-2024-003</td>
+                <td class="text-center">17-06-2024</td>
+                <td class="text-center">28-06-2024</td>
+                <td class="text-center">UNPAID</td>
+                <td>Rp. 15,000,000.00</td>
+                <td class="text-center">Uji Fungsi</td>
+                <td class="d-flex align-items-center">
+                  <div
+                    class="progress grow w-100 h-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar progress-bar-striped"
+                      style="width: 85%"
+                    >
+                      85%
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">4</td>
+                <td>Perbaikan Jaringan CCTV</td>
+                <td>WO-2024-004</td>
+                <td class="text-center">24-06-2024</td>
+                <td class="text-center">31-06-2024</td>
+                <td class="text-center">UNPAID</td>
+                <td>Rp. 25,000,000.00</td>
+                <td class="text-center">Analisis dan Desain</td>
+                <td class="d-flex align-items-center">
+                  <div
+                    class="progress grow w-100 h-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar progress-bar-striped"
+                      style="width: 18%"
+                    >
+                      18%
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <div id="modal">
+        <div id="modalContent" class="position-relative">
+          <div id="formHeader" class="mb-3">Create New Project</div>
+          <div id="formInput">
+            <div class="mb-2">
+              <label for="projectName" class="form-label ps-2 fw-semibold"
+                >Title</label
+              >
+              <input
+                type="text"
+                id="projectName"
+                class="form-control"
+                placeholder="Title"
+                required
+              />
+            </div>
+            <div class="mb-2">
+              <label for="woNo" class="form-label ps-2 fw-semibold"
+                >Wo No.</label
+              >
+              <input
+                type="text"
+                id="woNo"
+                class="form-control"
+                placeholder="WO No."
+                required
+              />
+            </div>
+            <div class="mb-2">
+              <label for="startDate" class="form-label ps-2 fw-semibold"
+                >Start Date</label
+              >
+              <input
+                class="form-control"
+                type="date"
+                id="startDate"
+                name="trip-start"
+                value="dd-mm-yyyy"
+                min="2024-06-21"
+                required
+              />
+            </div>
+            <div class="mb-2">
+              <label for="endDate" class="form-label ps-2 fw-semibold"
+                >End Date</label
+              >
+              <input
+                class="form-control"
+                type="date"
+                id="endDate"
+                name="trip-start"
+                value="dd-mm-yyyy"
+                min="2024-06-21"
+                required
+              />
+            </div>
+            <div class="mb-2">
+              <label for="paymentStatus" class="form-label ps-2 fw-semibold"
+                >Payment Status</label
+              >
+              <select
+                class="form-select"
+                id="paymentStatus"
+                aria-label="Default select example"
+                required
+              >
+                <option selected>Choose Payment Status</option>
+                <option value="maulana">PAID</option>
+                <option value="alan">UNPAID</option>
+              </select>
+            </div>
+            <div class="mb-2">
+              <label for="value" class="form-label ps-2 fw-semibold"
+                >Value</label
+              >
+              <input class="form-control" type="text" id="value" required />
+            </div>
+            <div class="mb-4">
+              <label for="status" class="form-label ps-2 fw-semibold"
+                >Status</label
+              >
+              <select
+                class="form-select"
+                id="status"
+                aria-label="Default select example"
+                required
+              >
+                <option selected>Choose Payment</option>
+                <option value="analysis">Analisis & Desain</option>
+                <option value="testing">Uji Fungsi</option>
+                <option value="done">Selesai</option>
+              </select>
+            </div>
+            <div
+              id="createProjectActionBtn"
+              class="d-flex gap-2 align-items-center justify-content-end"
+            >
+              <button id="cancelBtn" class="close">Cancel</button>
+              <button id="submitBtn" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

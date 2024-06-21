@@ -1,0 +1,69 @@
+#containerLogin {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #2b3137;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#formLogin {
+  max-width: 640px;
+  padding: 0 40px;
+}
+
+form a {
+  text-decoration: none;
+}
+
+.input-group {
+  color: #2b3137;
+}
+
+#inputIcon {
+  background-color: #515962;
+  color: white;
+  border: 1px solid white;
+}
+
+#rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#submitBtn {
+  width: 100%;
+  background-color: #515962;
+  min-height: 3rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #515962;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #515962;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #515962;
+}
+
+#submitBtn:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #515962;
+}
+
+#submitBtn:active {
+  transform: scale(0.9);
+}
+
+#linkToRegister,
+#linkToReset {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}

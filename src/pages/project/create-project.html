@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Project</title>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/kanban.css" />
+    <script type="module" src="../../js/main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside id="sidebar">
+        <div class="d-flex">
+          <button id="toggleButton" type="button">
+            <i class="lni lni-grid-alt"></i>
+          </button>
+          <div class="sidebar-logo">
+            <a href="#" id="appLogo" class="position-relative">Apps</a>
+            <div
+              id="popup"
+              class="bg-light position-absolute d-flex flex-column gap-3 p-2 rounded-3 z-3 d-none"
+            >
+              <a
+                href="../../index.html"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-rocket"></i>
+                <span>Project</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-agenda"></i>
+                <span>Attendance</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-construction-hammer"></i>
+                <span>Worker</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-wallet"></i>
+                <span>Customer</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-pencil"></i>
+                <span>Procurement</span>
+              </a>
+              <a
+                href="#"
+                class="fs-6 fw-normal d-flex gap-3 align-items-center"
+                id="menuPopup"
+              >
+                <i class="lni lni-cog"></i>
+                <span>Configuration</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <ul class="sidebar-nav">
+          <span class="group-item">Workspace</span>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-user"></i>
+              <span>My Workspace</span>
+            </a>
+          </li>
+          <span class="group-item">Menu</span>
+          <li class="sidebar-item">
+            <a href="../../index.html" class="sidebar-link">
+              <i class="lni lni-rocket"></i>
+              <span>Project</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-book"></i>
+              <span>Lesson Learned</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link has-dropdown collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#auth"
+              aria-expanded="false"
+              aria-controls="auth"
+            >
+              <i class="lni lni-protection"></i>
+              <span>Auth</span>
+            </a>
+            <ul
+              id="auth"
+              class="sidebar-dropdown list-unstyled collapse"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="../auth/login.html" class="sidebar-link">Login</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Register</a>
+              </li>
+            </ul>
+          </li>
+          <span class="group-item">Master Data</span>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-dashboard"></i>
+              <span>Status</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-layers"></i>
+              <span>Material</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-funnel"></i>
+              <span>Project Type</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="../auth/login.html" class="sidebar-link">
+            <i class="lni lni-exit"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+      <main class="main p-3">
+        <div id="backBtn">
+          <button
+            class="d-flex gap-3 align-items-center border-0 rounded-3 bg-none"
+          >
+            <a
+              href="../../index.html"
+              class="text-decoration-none text-dark d-flex gap-2 align-items-center"
+            >
+              <i class="lni lni-arrow-left fw-semibold"></i>
+              Back
+            </a>
+          </button>
+        </div>
+        <div
+          id="formCreate"
+          class="w-100 h-100 d-flex justify-content-center align-items-center"
+        >
+          <form action="submit" class="">
+            <div id="formHeader" class="mb-3">Create New Project</div>
+            <div id="formInput" class="row">
+              <div class="col mb-3">
+                <div class="mb-3">
+                  <label for="projectName" class="form-label ps-2 fw-semibold"
+                    >Project Name</label
+                  >
+                  <input
+                    type="text"
+                    id="projectName"
+                    class="form-control"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="status" class="form-label ps-2 fw-semibold"
+                    >Status</label
+                  >
+                  <select
+                    class="form-select"
+                    id="status"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Choose Status</option>
+                    <option value="implementasi">Implementasi</option>
+                    <option value="uji fungsi">Uji Fungsi</option>
+                    <option value="selesai">Selesai</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="amount" class="form-label ps-2 fw-semibold"
+                    >Amount</label
+                  >
+                  <input
+                    type="number"
+                    id="amount"
+                    class="form-control"
+                    placeholder="Amount"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="location" class="form-label ps-2 fw-semibold"
+                    >Location</label
+                  >
+                  <input
+                    type="text"
+                    id="location"
+                    class="form-control"
+                    placeholder="Location"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label
+                    for="projectManager"
+                    class="form-label ps-2 fw-semibold"
+                    >Project Manager</label
+                  >
+                  <select
+                    class="form-select"
+                    id="projectManager"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Choose Project Manager</option>
+                    <option value="maulana">Maulana</option>
+                    <option value="alan">Alan</option>
+                    <option value="dimyati">Dimyati</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col mb-3">
+                <div class="mb-3">
+                  <label for="projectType" class="form-label ps-2 fw-semibold"
+                    >Project Type</label
+                  >
+                  <select
+                    class="form-select"
+                    id="projectType"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Choose Project Type</option>
+                    <option value="operation and maintenance">
+                      Operation & Maintenance
+                    </option>
+                    <option value="capital-based">Capital-Based</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="customer" class="form-label ps-2 fw-semibold"
+                    >Customer</label
+                  >
+                  <select
+                    class="form-select"
+                    id="customer"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Choose Customer</option>
+                    <option value="kemenhub">Kemenhub</option>
+                    <option value="kemenkeu">Kemenkeu</option>
+                    <option value="pupr">PUPR</option>
+                    <option value="kemendikbud">Kemendikbud</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="startDate" class="form-label ps-2 fw-semibold"
+                    >Start Date</label
+                  >
+                  <input
+                    class="form-control"
+                    type="date"
+                    id="startDate"
+                    name="trip-start"
+                    value="dd-mm-yyyy"
+                    min="2024-06-21"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="endDate" class="form-label ps-2 fw-semibold"
+                    >End Date</label
+                  >
+                  <input
+                    class="form-control"
+                    type="date"
+                    id="endDate"
+                    name="trip-start"
+                    value="dd-mm-yyyy"
+                    min="2024-06-21"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="weeklyPeriod" class="form-label ps-2 fw-semibold"
+                    >Weekly Period Start Day</label
+                  >
+                  <select
+                    class="form-select"
+                    id="weeklyPeriod"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Choose Day</option>
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                id="createProjectActionBtn"
+                class="d-flex gap-2 align-items-center justify-content-end"
+              >
+                <button id="cancelBtn">Cancel</button>
+                <button id="submitBtn" class="btn btn-primary">Submit</button>
+                <button id="submitAddAnotherBtn">Submit & Add Another</button>
+                <button id="submitContinueEditingBtn">
+                  Submit & Continue Editing
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

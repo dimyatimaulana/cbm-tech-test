@@ -1,0 +1,42 @@
+#taskPool {
+  border-radius: 10px;
+  background-color: #ededee;
+  width: 300px;
+  height: fit-content;
+}
+
+.card {
+  background-color: #f3f3f4;
+}
+
+.card-action button {
+  display: flex;
+  background-color: #ededee;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  padding: 0;
+}
+
+#btnAddStatus {
+  height: fit-content;
+}
+
+#btnAddStatus {
+  border: 0;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+}
+#btnAddStatus:hover {
+  box-shadow: 2px 2px 18px #c5c5c5;
+  border: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.rounded-circle:hover {
+  box-shadow: 2px 2px 18px #c5c5c5;
+  border: 0;
+  transition: 0.2s ease-in-out;
+}
